@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header">Ineuron Courses Data</div>
+      <div style="overflow-x:auto; overflow-y:scroll;">
+          <table>
+              <tr>
+                 <th>Course Name</th>
+                  <th>Description</th>
+                 <th>pricing</th>
+                  <th>requirements</th>
+                 <th>features</th>
+                 <th>learn</th>
+              </tr>
+             {% for data in detail %}
+          <tr>
+              <td>{{data['title']}}</td>
+             <td>{{data['description']}}</td>
+             <td>{{data['price']}}</td>
+             <td>{{data['requirements']}} </td>
+              <td>{{data['features']}}</td>
+             <td>{{data['learn']}} </td>
+
+           {% endfor %}
+          </table>
+      </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
